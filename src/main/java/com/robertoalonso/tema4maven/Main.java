@@ -11,7 +11,30 @@ public class Main {
 
        String texto = "Roberto Alonso";
        String banner = FigletFont.convertOneLine(texto);
-       System.out.println(banner);
+
+       List<String> infoTotal = new ArrayList<>();
+
+
+       for (String info : banner.split("\n")) {
+           infoTotal.add(info);
+       }
+
+       infoTotal.add("Nombre: Roberto Alonso Boix");
+       infoTotal.add("Edad: 18");
+       infoTotal.add("Email: robaloboi@alu.edu.gva.es");
+       infoTotal.add("Telefono: 687562393");
+       infoTotal.add("Idiomas: Español Nativo, Ingles B2, Valenciano C1");
+       infoTotal.add("Dirección: Calle Ciutat de Laval 13, 4, 13");
+       infoTotal.add("Experiencia: 400 horas de practicas de SMX");
+       infoTotal.add("Educacion: ESO y grado medio de SMX");
+       infoTotal.add("Habilidades: Java, Python, trabajo en equipo");
+       infoTotal.add("Objetivo profesional: Desarrollador de software");
+
+       infoTotal.forEach(System.out::println);
 
    }
+
+
+
 }
+
