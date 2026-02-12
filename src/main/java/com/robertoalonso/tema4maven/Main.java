@@ -32,6 +32,10 @@ public class Main {
 
        infoTotal.forEach(System.out::println);
 
+       Screen screen = new DefaultTerminalFactory().createScreen();
+       screen.startScreen();
+       screen.setCursorPosition(null);
+
    }
 
 
