@@ -39,6 +39,16 @@ public class Main {
        Screen screen = new DefaultTerminalFactory().createScreen();
        screen.startScreen();
        screen.setCursorPosition(null);
+       int yOffset = screen.getTerminalSize().getRows();
+
+
+       while (yOffset > -infoTotal.size()) {
+           drawFrame(screen, infoTotal, yOffset);
+           try {
+               Thread.sleep(100);
+           } catch (InterruptedException ignored) { }
+           yOffset--;
+       }
 
    }
     private static void drawFrame(Screen screen, List<String> lines, int yOffset)
